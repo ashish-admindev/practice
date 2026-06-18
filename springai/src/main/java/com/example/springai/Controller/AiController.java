@@ -17,8 +17,16 @@ public class AiController {
         return ResponseEntity.ok().body(response);
         
     }
+
      @GetMapping("/user/{id}")
     public String getUserById(@PathVariable int id) {
-        return "User ID is: " + id;
-    }
+        return "User ID is: " + id;}
+
+    @GetMapping("/product")
+    public String getProduct(@RequestParam String name,
+                             @RequestParam int price) {
+
+        return "Product: " + name + ", Price: " + price;
+
 }
+    }
